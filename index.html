@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <label for="passwordLength">Enter the length of the password (between 8 and 128 characters):</label>
+       <!-- for attribute describes password length criteria. Input line below references the line above with the id. -->
+        <input type="number" id="passwordLength" min="8" max="128" />
+        <br />
+        <!-- Each input line on 25, 28, 31, 34,  uses IDs to link and associate with JS code. -->
+        <input type="checkbox" id="includeLowercase" />
+        <label for="includeLowercase">Include lowercase characters</label>
+        <br />
+        <input type="checkbox" id="includeUppercase" />
+        <label for="includeUppercase">Include uppercase characters</label>
+        <br />
+        <input type="checkbox" id="includeNumeric" />
+        <label for="includeNumeric">Include numeric characters</label>
+        <br />
+        <input type="checkbox" id="includeSpecial" />
+        <label for="includeSpecial">Include special characters</label>
+        <br />
+        <!-- button is linked with btn and generate id, to create the four options for a random password. -->
+        <button id="generate" class="btn">Generate Password</button>
+        <br />
+        <!-- password ID links to JS. Placeholder is displayed before password is generated. Readonly ensures that text area is not able to be edited.  -->
+        <textarea
+          id="password"
+          placeholder="Your Secure Password"
+          aria-label="Generated Password"
+          readonly
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
